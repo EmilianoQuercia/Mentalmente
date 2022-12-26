@@ -1,0 +1,36 @@
+
+.contenedorPrincipal{
+    background-image: url(../public/assets/img/fondojuego1-min.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    font-family:'Oswald', sans-serif ;
+}
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoPrincipal{
+    width: 80%;
+}
+
+.btnComenzar{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    box-shadow: 4px 4px 5px #f29999;
+    border-radius: 15px;
+    background-color: #bf5669;
+    color: #fff;
+}
+
+.btnComenzar:active{
+    background-color: #f29999;
+}
+
