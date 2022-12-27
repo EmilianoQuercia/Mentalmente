@@ -5,6 +5,7 @@ import PantallaMenu from './components/pantallaMenu/PantallaMenu'
 import PantallaPreguntas from './components/pantallaPreguntas/PantallaPreguntas'
 import Ajustes from './components/Ajustes/Ajustes'
 import PantallaFinal from './components/pantallaFinal/PantallaFinal'
+import SoloCorrectas from './components/pantallaPreguntas/SoloCorrectas'
 function App() {
  
 
@@ -14,7 +15,9 @@ function App() {
           <Routes>
             <Route path='/' element={<PantallaInicio />}/>
             <Route path='/menu' element={<PantallaMenu/>}/> 
-            <Route path='/juego' element={<PantallaPreguntas/>}/>
+            <Route path='/reloj' element={<PantallaPreguntas/>}/>
+            <Route path='/correctas' element={<SoloCorrectas/>}/>
+
             <Route path='/ajustes' element={<Ajustes/>}/>
             <Route path='/final' element= {<PantallaFinal/>}/>
           </Routes>

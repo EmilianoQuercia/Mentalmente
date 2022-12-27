@@ -7,8 +7,19 @@ import MenuSoloCorrectas from './MenuSoloCorrectas';
 
 const PantallaMenu = () => {
     const [input,setInput] = useState('')
-   
+    const [modoJuego, setModoJuego] = useState('')
 
+    const modoReloj = (e) =>{
+        const p = e.target.value
+        setModoJuego(p)
+        console.log(p)
+    }
+    const modoCorrectas = (e) =>{
+        const p = e.target.value
+        setModoJuego(p)
+        console.log(p)
+    }
+    
     
     return (
         <div className='registro'>
@@ -19,16 +30,17 @@ const PantallaMenu = () => {
                 <h3 className="nombre">INGRESE SU NOMBRE</h3>
                 <input type="text" name="usuario" className="inputUsuario" onChange={(e)=>{setInput(e.target.value)}}/>
             </div>
+                <h3 style={{textAlign:'center'}}>ELIJA EL MODO DE JUEGO</h3>
             
-            <input type='radio' name='modoJuego' className='inputSelect' id='1' />
+            <input type='radio' name='modoJuego' className='inputSelect' id='1' value={'reloj'} onChange={modoReloj} />
             <label htmlFor="1"><MenuContrareloj/></label>
         
-            <input type='radio' name='modoJuego' id='2' className='inputSelect' />
+            <input type='radio' name='modoJuego' id='2' className='inputSelect' value={'correctas'} onChange={modoCorrectas} />
             <label htmlFor="2" ><MenuSoloCorrectas/></label> 
 
             <h4 className="h4Registro">BUENA SUERTE!!!!</h4>
-            <Link to='/juego' style={{textAlign:'center'}}>{
-                input === ''?
+            <Link to={`/${modoJuego}`} style={{textAlign:'center'}}>{
+                input === '' || modoJuego === ''?
                  <button className="btnComenzar" disabled>Comenzar Juego</button>
                 :<button className="btnComenzar">Comenzar Juego</button>
             }</Link>

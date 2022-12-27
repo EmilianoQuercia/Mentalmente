@@ -58,3 +58,8 @@
 .opcion:active{
     background-color: #bf5669;
 }
+
+.puntosCorrectas{
+    color: yellow;
+    font-size: 25px;
+}
