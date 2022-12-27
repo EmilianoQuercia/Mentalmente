@@ -2,11 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import './pantallaMenu.css'
 import { Link } from 'react-router-dom';
+import MenuContrareloj from './MenuContrareloj';
+import MenuSoloCorrectas from './MenuSoloCorrectas';
 
 const PantallaMenu = () => {
     const [input,setInput] = useState('')
-    console.log(input)
+   
 
+    
     return (
         <div className='registro'>
             <div className="divAjustes">
@@ -16,11 +19,13 @@ const PantallaMenu = () => {
                 <h3 className="nombre">INGRESE SU NOMBRE</h3>
                 <input type="text" name="usuario" className="inputUsuario" onChange={(e)=>{setInput(e.target.value)}}/>
             </div>
-            <h4 className="h4Registro">INDICACIONES DEL JUEGO</h4>
-            <p>- Tienes 60 seg para responder</p>
-            <p>- Elija la respuesta correcta para sumar puntos</p>
-            <p>- Por cada respuesta correcta se aumentara el tiempo 2 segundos</p>
-            <p>- Por cada respuesta incorrecta perdera 2 segundos</p>
+            
+            <input type='radio' name='modoJuego' className='inputSelect' id='1' />
+            <label htmlFor="1"><MenuContrareloj/></label>
+        
+            <input type='radio' name='modoJuego' id='2' className='inputSelect' />
+            <label htmlFor="2" ><MenuSoloCorrectas/></label> 
+
             <h4 className="h4Registro">BUENA SUERTE!!!!</h4>
             <Link to='/juego' style={{textAlign:'center'}}>{
                 input === ''?

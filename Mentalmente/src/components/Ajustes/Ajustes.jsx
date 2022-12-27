@@ -1,12 +1,14 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ajustes.css'
 
 const Ajustes = () => {
+   
     return (
     <div className="pantallaAjustes">
         <h3>MUSICA</h3>
-        <input type="range" name="inputMusica" id="inputMusica"/>
+        <input type="range" name="inputMusica"/>
         <h3>SONIDOS</h3>
         <input type="range" name="inputSonidos" id="inputSonido"/>
         <Link to={'/menu'}><button id="btnVolver">VOLVER</button></Link>
