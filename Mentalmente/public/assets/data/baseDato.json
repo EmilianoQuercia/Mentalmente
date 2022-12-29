@@ -1389,7 +1389,7 @@
     {
         "id":3034,
         "rubro":"ciencia",
-        "pregunta": "¿Qué es la salida de sngre de un vaso sanguíneo? ",
+        "pregunta": "¿Qué es la salida de sangre de un vaso sanguíneo? ",
         "imagen": "./assets/img/ciencia.jpg",
         "respuesta": "HEMORRAGIA",
         "otrasOpciones": ["HEMOFILIA","HEMOSTASIA","HEMÓLISIS"]
@@ -1557,7 +1557,7 @@
     {
         "id":4004,
         "rubro": "deportes",
-        "pregunta": "¿Cual fue el mayor puesto del ranking mundial que alcanzo la tenista Gabiela Sabattini? ",
+        "pregunta": "¿Cual fue el mayor puesto del ranking mundial que alcanzo la tenista Gabriela Sabattini? ",
         "imagen": "./assets/img/DEPORTE.jpg",
         "respuesta": "TERCERO",
         "otrasOpciones": ["PRIMERO","SEGUNDO","QUINTA"]

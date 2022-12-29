@@ -1,12 +1,15 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './pantallaPreguntas.css'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
+import { GlobalContext } from '../../context/GlobalContext';
 
-let puntaje = 0
+
 const SoloCorrectas = () => {
     
+    const { puntos, setPuntos } = useContext(GlobalContext)
+
     let navigate = useNavigate()
     const [pregunta, setPregunta] = useState()
     const [objPregunta, setObjPregunta] = useState()
@@ -56,7 +59,7 @@ const SoloCorrectas = () => {
                 showConfirmButton: false,
                 background: '#ffaaaa'
             })
-            puntaje++
+            setPuntos(puntos + 1)
             setTimeout(cargarPreguntas, 2000)
         } else {
             Swal.fire({
@@ -71,7 +74,7 @@ const SoloCorrectas = () => {
             })
 
             setTimeout(()=>{navigate('/final')
-            puntaje = 0
+            
             }, 2000)
             console.log('INCORRECTA')
 
@@ -81,7 +84,7 @@ const SoloCorrectas = () => {
 
     return (
         <div id="pantallaJuego" className="tablero">
-            <div id="tiempo" className="puntosCorrectas">Puntos: {puntaje}</div>
+            <div id="tiempo" className="puntosCorrectas">Puntos: {puntos}</div>
             <div className="cajaPregunta" id="cajaPregunta">
                 <span id="pregunta">{pregunta}</span>
                 <img id="imagen" src={img} alt="" />

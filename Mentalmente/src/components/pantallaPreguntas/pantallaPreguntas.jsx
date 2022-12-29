@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './pantallaPreguntas.css'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
-
-
-
-let puntaje = 10
+import { GlobalContext } from '../../context/GlobalContext';
 
 const PantallaPreguntas = () => {
-
+    
+    const {puntos, setPuntos } = useContext(GlobalContext)
     
     let navigate = useNavigate()
     const [pregunta, setPregunta] = useState()
@@ -74,8 +72,7 @@ const PantallaPreguntas = () => {
                 background: '#ffaaaa'
             })   
             setTime(time + 4)
-            puntaje++
-            console.log(puntaje)
+            setPuntos(puntos + 1)
             setTimeout(cargarPreguntas,2000)
         } else{
             Swal.fire({

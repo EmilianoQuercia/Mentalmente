@@ -15,10 +15,11 @@
 }
 .tablaPuntos{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     font-size: 20px;
-    margin: 10px;
+    margin: 5px;
+    padding: 10px;
 }
 
 .msj{
@@ -28,7 +29,9 @@
 
 .msjNombre{
     text-align: center;
+    margin: 0px 15px;
 }
+
 .msjPuntos{
     text-align: center;
     width: 80px;
