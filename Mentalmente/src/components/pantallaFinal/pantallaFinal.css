@@ -1,0 +1,65 @@
+.final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: #f29a2e;
+    border: none;
+    box-shadow: 4px 4px #ce7c18;
+    border-radius: 10px;
+}
+
+.puntos{
+    text-align: center;
+    margin: 10px;
+}
+.tablaPuntos{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.msj{
+    color: #d91e0d;
+    font-weight: bold;
+}
+
+.msjNombre{
+    text-align: center;
+    margin: 0px 15px;
+}
+
+.msjPuntos{
+    text-align: center;
+    width: 80px;
+}
+
+.reinicio{
+    margin: 20px;
+    padding: 10px;
+    background-color: #bf5669;
+    border: none;
+    box-shadow: 4px 4px #963547 ;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #f2f2f2;
+}
+.reinicio:active{
+    background-color: #963547;
+}
+
+@media (min-width:768px){
+    .final{
+        width: 50%;
+    }
+
+}
+@media (min-width:992px){
+    .final{
+        width: 30%;
+    }
+
+}

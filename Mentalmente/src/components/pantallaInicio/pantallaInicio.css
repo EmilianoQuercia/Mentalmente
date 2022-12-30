@@ -1,12 +1,5 @@
 
-.contenedorPrincipal{
-    background-image: url(../public/assets/img/fondojuego1-min.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; 
-    font-family:'Oswald', sans-serif ;
-}
+
 .inicio{
     display: flex;
     flex-direction: column;

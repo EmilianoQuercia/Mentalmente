@@ -1,0 +1,65 @@
+.tablero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reloj{
+    color:yellow;
+    width: 50px;
+    height: 50px;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.cajaPregunta{
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #f29a2e;
+   border: 3px solid #000;
+   border-radius: 10px;
+   margin: 10px;
+   padding: 10px;
+   color: #000;
+}
+
+#pregunta{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cajaPregunta img{
+ 
+    height: 100px;
+    margin-top: 20px;
+}
+
+.correcto{
+    margin: 10px;  
+}
+.opcion{
+    width: 80%;
+    background-color: #f29999;
+    border: none;
+     box-shadow: 4px 4px #bf5669;
+    border-radius: 10px;
+    margin: 5px auto;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+.opcion:active{
+    background-color: #bf5669;
+}
+
+.puntosCorrectas{
+    color: yellow;
+    font-size: 25px;
+}
