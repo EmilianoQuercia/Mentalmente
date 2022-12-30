@@ -50,3 +50,16 @@
 .reinicio:active{
     background-color: #963547;
 }
+
+@media (min-width:768px){
+    .final{
+        width: 50%;
+    }
+
+}
+@media (min-width:992px){
+    .final{
+        width: 30%;
+    }
+
+}

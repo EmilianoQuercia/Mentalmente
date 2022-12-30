@@ -65,10 +65,27 @@
     border-radius: 10px;
     margin: 5px;
 }
+.containerModoJuego{
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
 .inputSelect{
     display: none;
 }
 .inputSelect:checked + label{
     background-color: red;
     border-radius: 10px;
+}
+
+@media (min-width:992px){
+    .registro{
+        width: 50%;
+    }
+    .containerModoJuego{
+        flex-direction: row;
+    }
+    .modoJuego{
+        min-height: 95%;
+    }
 }

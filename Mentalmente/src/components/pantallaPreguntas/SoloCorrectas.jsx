@@ -27,8 +27,7 @@ const SoloCorrectas = () => {
        
     const cargarPreguntas = async () => {
 
-
-        const response = await fetch('./assets/data/baseDato.json');
+        const response = await fetch('./src/data/baseDato.json');
         const BD = await response.json()
 
         let indicePregunta = Math.round(Math.random() * BD.length)
@@ -79,14 +78,12 @@ const SoloCorrectas = () => {
             
             }, 2000)
             console.log('INCORRECTA')
-
         }
-
     }
 
     return (
         <div id="pantallaJuego" className="tablero">
-            <div id="tiempo" className="puntosCorrectas">Puntos: {puntos}</div>
+            <div id="tiempo" className="puntosCorrectas">PUNTOS: {puntos}</div>
             <div className="cajaPregunta" id="cajaPregunta">
                 <span id="pregunta">{pregunta}</span>
                 <img id="imagen" src={img} alt="" />

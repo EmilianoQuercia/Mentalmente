@@ -29,3 +29,17 @@
     color: #fff;
 
 }
+
+
+@media (min-width:576px){
+    .pantallaAjustes{
+        width: 50%;
+    }
+    
+}
+@media (min-width:768px){
+    .pantallaAjustes{
+        width: 30%;
+    }
+
+}

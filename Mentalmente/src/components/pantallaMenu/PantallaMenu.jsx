@@ -32,11 +32,12 @@ const PantallaMenu = () => {
             </div>
                 <h3 style={{textAlign:'center'}}>ELIJA EL MODO DE JUEGO</h3>
             
-            <input type='radio' name='modoJuego' className='inputSelect' id='1' value={'Contra Reloj'} onChange={modoReloj} />
-            <label htmlFor="1"><MenuContrareloj/></label>
-        
-            <input type='radio' name='modoJuego' id='2' className='inputSelect' value={'Solo Correctas'} onChange={modoCorrectas} />
-            <label htmlFor="2" ><MenuSoloCorrectas/></label> 
+            <div className="containerModoJuego">
+                <input type='radio' name='modoJuego' className='inputSelect' id='1' value={'Contra Reloj'} onChange={modoReloj} />
+                <label htmlFor="1" className='selectorModoJuego'><MenuContrareloj/></label>
+                <input type='radio' name='modoJuego' id='2' className='inputSelect' value={'Solo Correctas'} onChange={modoCorrectas} />
+                <label htmlFor="2" className='selectorModoJuego' ><MenuSoloCorrectas/></label>
+            </div>
 
             <h4 className="h4Registro">BUENA SUERTE!!!!</h4>
             <Link to={`/${modoJuego}`} style={{textAlign:'center'}}>{
