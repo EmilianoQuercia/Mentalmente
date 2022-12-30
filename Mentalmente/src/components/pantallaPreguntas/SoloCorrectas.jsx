@@ -8,7 +8,7 @@ import { GlobalContext } from '../../context/GlobalContext';
 
 const SoloCorrectas = () => {
     
-    const { puntos, setPuntos } = useContext(GlobalContext)
+    const { puntos, setPuntos, soundGanar, soundPerder } = useContext(GlobalContext)
 
     let navigate = useNavigate()
     const [pregunta, setPregunta] = useState()
@@ -50,6 +50,7 @@ const SoloCorrectas = () => {
 
     const seleccionarOpcion = (index) => {
         if (index === objPregunta.respuesta) {
+            soundGanar.play()
             Swal.fire({
                 icon: 'success',
                 iconColor: '#29bf12',
@@ -62,6 +63,7 @@ const SoloCorrectas = () => {
             setPuntos(puntos + 1)
             setTimeout(cargarPreguntas, 2000)
         } else {
+            soundPerder.play()
             Swal.fire({
                 icon: 'error',
                 iconColor: '#f00',

@@ -6,7 +6,7 @@ import { GlobalContext } from '../../context/GlobalContext';
 
 const PantallaPreguntas = () => {
     
-    const {puntos, setPuntos } = useContext(GlobalContext)
+    const {puntos, setPuntos, soundGanar, soundPerder } = useContext(GlobalContext)
     
     let navigate = useNavigate()
     const [pregunta, setPregunta] = useState()
@@ -16,7 +16,7 @@ const PantallaPreguntas = () => {
     const [opcion2, setOpcion2] = useState([])
     const [opcion3, setOpcion3] = useState([])
     const [opcion4, setOpcion4] = useState([])
-    const [time,setTime] = useState(10)
+    const [time,setTime] = useState(60)
 
     const timer = ()=>setTime(time -1)
     
@@ -62,6 +62,7 @@ const PantallaPreguntas = () => {
     
     const seleccionarOpcion=(index)=>{
         if (index === objPregunta.respuesta){
+            soundGanar.play()
             Swal.fire({
                 icon: 'success',
                 iconColor: '#29bf12',
@@ -75,6 +76,7 @@ const PantallaPreguntas = () => {
             setPuntos(puntos + 1)
             setTimeout(cargarPreguntas,2000)
         } else{
+            soundPerder.play()
             Swal.fire({
                 icon: 'error',
                 iconColor: '#f00',

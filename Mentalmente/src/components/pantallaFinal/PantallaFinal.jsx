@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './pantallaFinal.css'
-import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalContext';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +8,7 @@ let tablaPuntos = []
 
 const PantallaFinal = () => {
     const navigate = useNavigate()
-    const {puntos, setPuntos, input, modoJuego} = useContext(GlobalContext)
+    const {puntos, setPuntos, input, modoJuego, soundRecord} = useContext(GlobalContext)
     const [tablaJuego, setTablaJuego] = useState('')
  
 
@@ -31,7 +30,7 @@ const PantallaFinal = () => {
     
             // si tenemos el puntaje mas alto nos tira un mensaje de alerta
             if(datosJugador.puntaje>tablaPuntos[0].puntaje){
-                // sonidoRecord.play()
+                soundRecord.play()
                 Swal.fire({
                     icon: 'success',
                     iconColor: '#29bf12',
