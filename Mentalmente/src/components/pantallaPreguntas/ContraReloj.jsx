@@ -39,7 +39,7 @@ const ContraReloj = ()=>{
         const cargarPreguntas = async () =>{
             
             
-            const response = await fetch('./src/data/baseDato.json');
+            const response = await fetch('../src/data/baseDato.json');
             const BD = await response.json()
             
             let indicePregunta = Math.round(Math.random()*BD.length)
