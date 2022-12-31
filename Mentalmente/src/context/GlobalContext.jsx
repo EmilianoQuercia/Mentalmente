@@ -16,12 +16,14 @@ const GlobalContextProvider = (props) =>{
     const [soundGanar,setSoundGanar] = useState(sonidoGanar)
     const [soundPerder,setSoundPerder] = useState(sonidoPerder)
     const [soundRecord,setSoundRecord] = useState(sonidoRecord)
-    
+    const[inputM, setInputM] = useState()
+    const[inputS, setInputS] = useState()
     
     return(
         <GlobalContext.Provider value={{
             puntos, setPuntos, input, setInput, 
-            modoJuego, setModoJuego, music, soundGanar, soundPerder, soundRecord 
+            modoJuego, setModoJuego, music, soundGanar, soundPerder, soundRecord,
+            inputM, setInputM, inputS, setInputS 
         }}>
             {props.children}
         </GlobalContext.Provider>

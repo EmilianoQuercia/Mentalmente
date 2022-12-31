@@ -29,7 +29,23 @@
     color: #fff;
 
 }
+.controlInput{
+    appearance:none;
+    background: #999;
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 5px;  
+}
 
+.controlInput::-webkit-slider-thumb{
+    appearance:none;
+    width: 30px;
+    height: 20px;
+    background-image: url('./assets/img/cerebro.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;   
+}
 
 @media (min-width:576px){
     .pantallaAjustes{

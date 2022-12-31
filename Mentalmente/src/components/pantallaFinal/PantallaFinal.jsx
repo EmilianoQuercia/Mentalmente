@@ -9,6 +9,7 @@ let tablaPuntos = []
 const PantallaFinal = () => {
     const navigate = useNavigate()
     const {puntos, setPuntos, input, modoJuego, soundRecord} = useContext(GlobalContext)
+    
     const [tablaJuego, setTablaJuego] = useState('')
  
 
