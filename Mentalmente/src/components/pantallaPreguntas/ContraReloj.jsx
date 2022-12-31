@@ -4,8 +4,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../context/GlobalContext';
 
-const PantallaPreguntas = () => {
-    
+const ContraReloj = ()=>{
     const {puntos, setPuntos, soundGanar, soundPerder } = useContext(GlobalContext)
     
     let navigate = useNavigate()
@@ -112,4 +111,4 @@ const PantallaPreguntas = () => {
     );
 }
 
-export default PantallaPreguntas;
+export default ContraReloj;
