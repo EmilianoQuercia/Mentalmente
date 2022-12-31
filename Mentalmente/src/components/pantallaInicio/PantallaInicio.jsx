@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalContext';
 const PantallaInicio = () => {
     
-    const {music,soundGanar,soundPerder,soundRecord} = useContext(GlobalContext)
+    const {music,soundGanar,soundPerder,soundRecord, setInputM, setInputS} = useContext(GlobalContext)
     
   
   
@@ -17,6 +17,8 @@ const PantallaInicio = () => {
             soundGanar.volume = vS
             soundPerder.volume = vS
             soundRecord.volume = vS
+            setInputM(vM*100)
+            setInputS(vS*100)
         }
         music.play()
     }

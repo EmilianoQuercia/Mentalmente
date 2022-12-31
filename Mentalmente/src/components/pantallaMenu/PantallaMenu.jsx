@@ -7,6 +7,7 @@ import MenuSoloCorrectas from './MenuSoloCorrectas';
 import { GlobalContext } from '../../context/GlobalContext';
 
 const PantallaMenu = () => {
+    
     const {input, setInput, modoJuego, setModoJuego} = useContext(GlobalContext)
     
 
