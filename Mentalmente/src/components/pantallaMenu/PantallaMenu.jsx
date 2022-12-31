@@ -33,9 +33,9 @@ const PantallaMenu = () => {
                 <h3 style={{textAlign:'center'}}>ELIJA EL MODO DE JUEGO</h3>
             
             <div className="containerModoJuego">
-                <input type='radio' name='modoJuego' className='inputSelect' id='1' value={'Contra Reloj'} onChange={modoReloj} />
+                <input type='radio' name='modoJuego' className='inputSelect' id='1' value={'ContraReloj'} onChange={modoReloj} />
                 <label htmlFor="1" className='selectorModoJuego'><MenuContrareloj/></label>
-                <input type='radio' name='modoJuego' id='2' className='inputSelect' value={'Solo Correctas'} onChange={modoCorrectas} />
+                <input type='radio' name='modoJuego' id='2' className='inputSelect' value={'SoloCorrectas'} onChange={modoCorrectas} />
                 <label htmlFor="2" className='selectorModoJuego' ><MenuSoloCorrectas/></label>
             </div>
 
